@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #007BFF;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+button {
+        border-radius: 30px;
+        background-color: #F8F9FA;
+        height: 40px;
+        border: none;
+        font-weight: bold;
+        font-size: 14;
+        font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+        cursor: pointer;
+    }
+
+button :hover {
+    opacity: 0.8;
+}
+
+input {
+    border: 1px solid ;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #F8F9FA;
+    font-size: 16px;
+    padding-left: 10px;
+    outline: none;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #9ecdff;
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif
+}
+
+p {
+    color: black;
+    font-weight: bold;
+}
+
+span {
+    font-weight: normal;
+} 
+
+.button-secondary {
+    display: contents;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.button-secondary:hover {
+    opacity: 0.8;
+}
+
+footer {
+    position: relative;
+    border: none;
+    font-style: italic;
+    cursor: default;
+
+    & p {
+        color: rgb(203, 203, 203);
+    }
+}
