@@ -14,15 +14,20 @@ app.get('/', (req, res) => {
 })
 
 app.post('/users', async (req, res) => {
-    await prisma.user.create({
-        data: {
-            name: req.body.name,
-            age: req.body.age,
-            email: req.body.email
-        }
-    })
-    res.status(201).json(req.body)
-}) 
+    try {
+        const user = await prisma.user.create({
+            data: {
+                name: req.body.name,
+                age: parseInt(req.body.age, 10),
+                email: req.body.email
+            }
+        });
+        res.status(201).json(req.body)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: error.message });
+    }
+});
 
 app.get('/users', async (req, res) => {
     const { name, email, age } = req.query
